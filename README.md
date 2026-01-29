@@ -1,4 +1,4 @@
-# Auto-Close Browser Extension
+# Auto-Close Window Browser Extension
 
 A Chrome browser extension that automatically closes specific tabs after a 3-second delay based on user-defined domain and page title matches.
 
