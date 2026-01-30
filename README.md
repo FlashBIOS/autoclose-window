@@ -34,4 +34,3 @@ A Chrome browser extension that automatically closes specific tabs after a 3-sec
 - `manifest.json`: Extension configuration and permissions.
 - `background.js`: Service worker handling the tab monitoring and closing logic.
 - `popup.html` / `popup.js`: The user interface and logic for the settings page.
-- `Makefile`: Build script for packaging the extension.
