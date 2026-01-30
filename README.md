@@ -26,7 +26,7 @@ A Chrome browser extension that automatically closes specific tabs after a 3-sec
 2. Add pairs of **Domain** and **Title substring**:
    - **Domain**: Matches if the tab's hostname contains this string (e.g., `youtube.com`).
    - **Title substring**: Matches if the tab's title contains this string (e.g., `Distracting Video`).
-3. Click **Save Settings**.
+3. Click **Save**.
 4. Any tab matching these criteria will now automatically close 3 seconds after it finishes loading.
 
 ## Project Structure
