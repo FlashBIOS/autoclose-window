@@ -6,14 +6,14 @@ const status = document.getElementById('status');
 function createPairElement(domain = '', title = '') {
     const div = document.createElement('div');
     div.className = 'pair';
-    
+
     const domainInput = document.createElement('input');
     domainInput.placeholder = 'Domain (e.g. example.com)';
     domainInput.value = domain;
     domainInput.className = 'domain';
 
     const titleInput = document.createElement('input');
-    titleInput.placeholder = 'Title substring';
+    titleInput.placeholder = 'Page Title';
     titleInput.value = title;
     titleInput.className = 'title';
 
@@ -44,7 +44,15 @@ function saveOptions() {
     });
 }
 
+function addLabels() {
+    const labelElement = document.createElement('label');
+    labelElement.textContent = 'Domain & Page Title:';
+    labelElement.className = 'label';
+    container.appendChild(labelElement);
+}
+
 function restoreOptions() {
+    addLabels();
     chrome.storage.sync.get({ autoClosePairs: [] }, (items) => {
         items.autoClosePairs.forEach(pair => {
             createPairElement(pair.domain, pair.title);
