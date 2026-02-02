@@ -13,7 +13,7 @@ A Chrome browser extension that automatically closes specific tabs after a 3-sec
 
 ### For Developers (Manual Load)
 
-1. Clone or download this repository.
+1. [Download](https://github.com/FlashBIOS/autoclose-window/archive/refs/heads/master.zip) this project and extract the extension files to a local directory.
 2. Open your browser and navigate to the extensions page:
    - **Chrome**: `chrome://extensions/`
    - **Edge**: `edge://extensions/`
