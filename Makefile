@@ -1,8 +1,10 @@
 
 PHONY=build-chrome build-firefox clean all
 
-all: build-chrome build-firefox
+all: clean build-all
 	echo "Build all complete!"
+
+build-all: build-chrome build-firefox
 
 build-chrome:
 	mkdir -p out/chrome
@@ -29,3 +31,4 @@ build-firefox:
 
 clean:
 	rm -rf out
+	@echo "Clean complete."
