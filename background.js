@@ -1,8 +1,16 @@
 let autoClosePairs = [];
 
+function addDefaultPair() {
+    autoClosePairs.push({ domain: "126.0.0.1", title: "Successfully Logged In" });
+    chrome.storage.sync.set({ autoClosePairs });
+}
+
 function updatePairs() {
     chrome.storage.sync.get({ autoClosePairs: [] }, (items) => {
         autoClosePairs = items.autoClosePairs;
+        if (autoClosePairs.length === 0) {
+            addDefaultPair();
+        }
     });
 }
 
@@ -13,6 +21,9 @@ updatePairs();
 chrome.storage.onChanged.addListener((changes, area) => {
     if (area === 'sync' && changes.autoClosePairs) {
         autoClosePairs = changes.autoClosePairs.newValue;
+        if (autoClosePairs.length === 0) {
+            addDefaultPair();
+        }
     }
 });
 
