@@ -17,7 +17,18 @@
   },
   "applications": {
     "gecko": {
-      "id": "autoclose-ignition@gamemore.com"
+      "id": "nospam@gamemore.com"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "data_collection_permissions": {
+        "required": [
+          "websiteContent",
+          "browsingActivity"
+        ],
+        "optional": []
+      }
     }
   }
 }
