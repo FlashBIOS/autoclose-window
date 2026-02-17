@@ -1,5 +1,5 @@
 
-PHONY=build-chrome build-firefox clean all
+.PHONY=build-chrome build-firefox build-all clean all
 
 all: clean build-all
 	echo "Build all complete!"
