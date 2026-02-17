@@ -1,7 +1,7 @@
 let autoClosePairs = [];
 
 function addDefaultPair() {
-    autoClosePairs.push({ domain: "126.0.0.1", title: "Successfully Logged In" });
+    autoClosePairs.push({ domain: "127.0.0.1", title: "Successfully Logged In" });
     chrome.storage.sync.set({ autoClosePairs });
 }
 
