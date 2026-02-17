@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Auto-Close Window",
+  "name": "Auto-Close Ignition",
   "version": "1.0",
-  "description": "Auto-closes tabs after 3 seconds if the domain and title match a pre-defined list.",
+  "description": "Auto-close Ignition login windows after 3 seconds so you don't have to.",
   "permissions": [
     "tabs",
     "storage",
@@ -17,7 +17,7 @@
   },
   "applications": {
     "gecko": {
-      "id": "autoclose-window@your-domain.example"
+      "id": "autoclose-ignition@gamemore.com"
     }
   }
 }
