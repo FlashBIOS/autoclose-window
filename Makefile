@@ -1,7 +1,7 @@
 
 .PHONY=build-chrome build-firefox build-all clean all
 
-SOURCES=background.js popup.html popup.js
+SOURCES=manifest.json background.js popup.js popup.html
 
 all:
 	$(MAKE) clean
@@ -14,19 +14,18 @@ build-all: build-chrome build-firefox
 build-chrome:
 	mkdir -p out/chrome
 
-	cp manifest-chrome.json out/chrome/manifest.json
-	cp $(SOURCES) out/chrome
+	cp popup.html chrome/* out/chrome
 
-	cd out/chrome && zip -qr auto-close-ignite.zip manifest.json $(SOURCES)
+	cd out/chrome && zip -qr auto-close-ignite.zip $(SOURCES)
 
 	@echo "Build Chrome complete."
 
 build-firefox:
 	mkdir -p out/firefox
-	cp manifest-firefox.json out/firefox/manifest.json
-	cp $(SOURCES) out/firefox
 
-	cd out/firefox && zip -qr auto-close-ignite.zip manifest.json $(SOURCES)
+	cp popup.html firefox/* out/firefox
+
+	cd out/firefox && zip -qr auto-close-ignite.zip $(SOURCES)
 
 	@echo "Build Firefox complete."
 
