@@ -5,8 +5,7 @@
   "description": "Auto-close Ignition login windows after 3 seconds so you don't have to.",
   "permissions": [
     "tabs",
-    "storage",
-    "notifications"
+    "storage"
   ],
   "background": {
     "service_worker": "background.js"
